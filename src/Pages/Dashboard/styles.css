@@ -1,3 +1,32 @@
 .behive-banner {
     display: flex;
 }
+
+.choose-us-content {
+    display: flex;
+    gap: 10px;
+    align-items: anchor-center;
+    height: 80px;
+}
+
+.our-space-card {
+    height: 384px;
+    width: 370px;
+    border-radius: 8px;
+    box-shadow: var(#000, 0.06);
+    padding: 8px;
+}
+
+.space-box-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.distance-box {
+    width: 52px;
+    height: 52px;
+    align-content: center;
+    text-align: center;
+    background-color: #F9F9F9;
+    border-radius: 8px;
+}

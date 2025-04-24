@@ -4,22 +4,22 @@ import { createTheme } from '@mui/material/styles';
 export const theme = createTheme({
     palette: {
         primary: {
-            main: '#FFCF4B', // brandPrimary
+            main: '#FFBB00',
         },
         secondary: {
-            main: '#F9F9F9', // brandSecondary
+            main: '#000000',
         },
         text: {
-            primary: '#263238', // textMain
-            secondary: '#65624C', // textSecondary
+            primary: '#000000',
+            secondary: '#65624C',
         },
         grey: {
             100: '#E0E0E0',
             200: '#CECECC',
-            300: '#B7B6B8',
-            400: '#828282',
-            500: '#4F4F4F',
-            600: '#333333',
+            300: '#ADADA8',
+            400: '#8C8C87',
+            500: '#6B6B66',
+            600: '#4A4A45',
         },
     },
     spacing: 4, // base spacing unit (used with theme.spacing(n))
