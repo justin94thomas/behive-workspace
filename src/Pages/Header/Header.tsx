@@ -1,29 +1,42 @@
 import React from 'react';
-import { Box, Flex, Image, ActionIcon } from '@mantine/core';
+import { Box, IconButton, useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import { IconPhoneCall } from '@tabler/icons-react';
-import { useMediaQuery } from '@mantine/hooks';
-
 import { images } from '../../Content/assets';
 
 const Header = () => {
     const { Logo } = images;
-    const isMobile = useMediaQuery('(max-width: 768px)');
+    const theme = useTheme();
+    const isMobile = useMediaQuery('(max-width:768px)');
 
-    return <>
-        <Box py="lg" px="120px" bg="#fff"
-            style={{
+    return (
+        <Box
+            sx={{
+                py: theme.spacing(3), // equivalent to "lg"
+                px: isMobile ? theme.spacing(4) : '120px',
+                backgroundColor: '#fff',
                 borderBottom: '1px solid #E0E0E0',
-                paddingLeft: isMobile ? '32px' : '120px',
-                paddingRight: isMobile ? '32px' : '120px',
-            }}>
-            <Flex justify="space-between" align="center" display='flex'>
-                <Image src={Logo} alt="BHIVE Logo" height={40} />
-                <ActionIcon color="primary2" radius="xl" variant="outline" size="lg">
+            }}
+        >
+            <Box
+                display="flex"
+                justifyContent="space-between"
+                alignItems="center"
+            >
+                <img src={Logo} alt="BHIVE Logo" height={40} />
+                <IconButton
+                    color="primary"
+                    sx={{
+                        border: '1px solid',
+                        borderColor: 'primary.main',
+                        borderRadius: '50%',
+                    }}
+                >
                     <IconPhoneCall size={18} />
-                </ActionIcon>
-            </Flex>
+                </IconButton>
+            </Box>
         </Box>
-    </>
-}
+    );
+};
 
 export default Header;

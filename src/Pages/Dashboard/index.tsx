@@ -1,4 +1,5 @@
-import { Box, Container, Grid, Text, Title, Image, Group, GridCol } from '@mantine/core';
+import { Box, Grid } from '@mui/material';
+import Typography from '@mui/material/Typography';
 import {
     IconWifi,
     IconCoffee,
@@ -7,9 +8,10 @@ import {
     IconArmchair,
     IconCurrencyRupee,
     IconCalendar,
-    IconSoccerField
+    IconSoccerField,
 } from '@tabler/icons-react';
 import { images } from '../../Content/assets';
+import './styles.css';
 
 const features = [
     { icon: IconUsersGroup, label: 'Community Events' },
@@ -24,23 +26,41 @@ const features = [
 
 const Dashboard = () => {
     const { Brand, TextBG } = images;
+
     return (
         <Box>
-            <Container size="lg" py="xl">
-                <div style={{ display: 'flex', width: '100%' }}>
-                    <div>
-                        <Image src={TextBG} alt='Text Background' />
-                        <Title order={1} mb="sm" fw={700} size="3xl">
-                            Host your meeting with <br /> world-class amenities. <br /> Starting at ₹199/-!
-                        </Title>
-                    </div>
-                    <div>
-                        <Image src={Brand} width='338px' alt="Meeting illustration" />
-                    </div>
-                </div>
+            <Grid container className='behive-banner'>
+                <Grid size={6}>
+                    <Box
+                        style={{
+                            backgroundImage: `url(${TextBG})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            padding: '2rem',
+                            height: '100%',
+                        }}
+                    >
+                        <Typography
+                            sx={{
+                                fontWeight: 700,
+                                fontSize: '2rem',
+                                marginBottom: (theme) => theme.spacing(2),
+                            }}
+                        >
+                            Host your meeting with <br />
+                            world-class amenities. <br />
+                            Starting at ₹199/-!
+                        </Typography>
 
-            </Container>
-        </Box>
+                    </Box>
+                </Grid>
+                <Grid size={6} style={{ textAlign: 'center' }}>
+                    <img src={Brand} width={338} alt="Meeting illustration" />
+                </Grid>
+            </Grid>
+        </Box >
+
+
     );
 };
 
