@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './Pages/Header/Header';
-import Footer from './Pages/Footer/Footer';
 import Dashboard from './Pages/Dashboard';
 
 function App() {
@@ -8,7 +7,6 @@ function App() {
     <div className="App">
       <Header />
       <Dashboard />
-      <Footer />
     </div>
   );
 }

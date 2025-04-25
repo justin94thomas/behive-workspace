@@ -59,3 +59,39 @@
     box-sizing: border-box;
     justify-self: center
 }
+
+.download-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 8px;
+    border: 1.08px solid #EEE7E7CC;
+}
+
+.download-text {
+    color: #605F5F;
+    font-size: 20px;
+}
+
+.download-box {
+    background: #fff;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    border: 1.08px solid #EEE7E7CC;
+    padding: 30px;
+}
+
+.behive-footer {
+    background-color: #222E34;
+    padding: 8px;
+    place-content: center;
+}
+
+.footer-text {
+    color: #DDDDDD;
+    font-size: 14px;
+}
+
+.behive-mobile {
+    width: 600px;
+    left: 30px;
+}
