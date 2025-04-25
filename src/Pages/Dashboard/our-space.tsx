@@ -1,4 +1,4 @@
-import { Box, Card, Grid, useTheme } from '@mui/material';
+import { Box, Card, Grid } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import './styles.css';
 import JSONData from './data.json';
@@ -7,8 +7,7 @@ import { IconDirectionSign } from '@tabler/icons-react';
 import PayButton from '../../Component/PayButton';
 
 const OurSpace = () => {
-    const theme = useTheme();
-    const [data, setData] = useState(JSONData);
+    const [data] = useState(JSONData); //setData
 
     return (
         <Box mt={10}>

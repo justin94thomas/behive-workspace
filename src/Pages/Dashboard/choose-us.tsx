@@ -1,4 +1,4 @@
-import { Box, Card, Grid, useTheme } from '@mui/material';
+import { Box, Grid, useTheme } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import {
     IconWifi,
@@ -10,7 +10,6 @@ import {
     IconCalendar,
     IconSoccerField,
 } from '@tabler/icons-react';
-import { images } from '../../Content/assets';
 import './styles.css';
 
 const features = [
@@ -25,7 +24,6 @@ const features = [
 ];
 
 const ChooseUs = () => {
-    const { Brand, TextBG } = images;
     const theme = useTheme();
 
     return (

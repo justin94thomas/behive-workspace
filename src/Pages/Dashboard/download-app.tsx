@@ -1,4 +1,4 @@
-import { Box, Card, Grid, useTheme, Button } from '@mui/material';
+import { Box, Grid, useTheme, Button } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import './styles.css';
 import { images } from '../../Content/assets';
