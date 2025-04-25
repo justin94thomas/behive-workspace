@@ -1,0 +1,53 @@
+.paybtn-main {
+    width: 172px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-radius: 6px;
+    border: 0.5px solid #EEE7E7;
+    position: relative;
+}
+
+.discount-tab {
+    position: absolute;
+    top: -11px;
+    left: 0;
+    right: 0;
+    background-color: #263238;
+    border-radius: 3px;
+    padding: 3px 5px;
+    width: fit-content;
+    text-align: center;
+    justify-self: center;
+}
+
+.discount-txt {
+    font-size: 8px !important;
+    color: #FFFDF7;
+
+}
+
+.grey-button {
+    color: #65624C;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+.yellow-button {
+    color: #514D2D;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+.pay-amt {
+    font-size: 20px;
+    color: #263238;
+    font-weight: 600 !important;
+}
+
+.pay-sub {
+    font-size: 16px;
+    font-weight: 400;
+    color: #263238;
+}

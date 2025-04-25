@@ -4,6 +4,7 @@ import './styles.css';
 import JSONData from './data.json';
 import { useState } from 'react';
 import { IconDirectionSign } from '@tabler/icons-react';
+import PayButton from '../../Component/PayButton';
 
 const OurSpace = () => {
     const theme = useTheme();
@@ -11,7 +12,7 @@ const OurSpace = () => {
 
     return (
         <Box mt={10}>
-            <Grid justifySelf={'left'} className="behive-choose-us">
+            <Grid className="behive-our-space">
                 <Typography sx={(theme) => ({
                     fontWeight: theme.typography.h2.fontWeight,
                     fontSize: theme.typography.h2.fontSize,
@@ -19,7 +20,7 @@ const OurSpace = () => {
                 })}>
                     Our Space Overview
                 </Typography>
-                <Grid container spacing={2}>
+                <Grid container spacing={8}>
                     {data && data.map(item => {
                         const imagePath = item.images[0]
                         return (
@@ -27,7 +28,7 @@ const OurSpace = () => {
                                 <Card className="our-space-card">
                                     <>
                                         <Grid container className="space-box-head">
-                                            <Typography variant="h6">{item.name}</Typography>
+                                            <Typography variant="h4" className='location-name'>{item.name}</Typography>
                                             <div className="distance-box">
                                                 <IconDirectionSign size={20} />
                                                 <Typography fontSize="8px" color="#26323880">{'6 Kms'}</Typography>
@@ -41,17 +42,9 @@ const OurSpace = () => {
                                             />
                                         </Grid>
                                     </>
-                                    <Box className="space-info">
-                                        <Box className="day-pass">
-                                            <Typography variant="body2">
-                                                Day Pass Price: ₹{item.day_pass_price}
-                                            </Typography>
-                                            {item.day_pass_discounts_percentage && item.day_pass_discounts_percentage[10] && (
-                                                <Typography variant="body2" color="secondary">
-                                                    {item.day_pass_discounts_percentage[10].message}
-                                                </Typography>
-                                            )}
-                                        </Box>
+                                    <Box className="day-pass">
+                                        <PayButton classVal={'grey'} price={item.day_pass_price} discount={item.day_pass_discounts_percentage} />
+                                        <PayButton classVal={'yellow'} price={2400} discount={item.day_pass_discounts_percentage} />
                                     </Box>
                                 </Card>
                             </Grid>

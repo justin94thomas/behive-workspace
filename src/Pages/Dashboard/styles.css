@@ -13,13 +13,14 @@
     height: 384px;
     width: 370px;
     border-radius: 8px;
-    box-shadow: var(#000, 0.06);
     padding: 8px;
+    border: 1.08px solid #EEE7E7CC;
 }
 
 .space-box-head {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .distance-box {
@@ -36,4 +37,25 @@
     height: 202px;
     border-radius: 8px;
     justify-self: center;
+}
+
+.day-pass {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    position: relative;
+    bottom: 0;
+}
+
+.location-name {
+    width: 60%;
+    font-weight: 600 !important;
+    color: #263238 !important;
+}
+
+.behive-our-space,
+.behive-choose-us {
+    width: 80%;
+    box-sizing: border-box;
+    justify-self: center
 }
