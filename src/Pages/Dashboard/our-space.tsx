@@ -20,7 +20,7 @@ const OurSpace = () => {
                 })}>
                     Our Space Overview
                 </Typography>
-                <Grid container spacing={8}>
+                <Grid container spacing={8} mt={6}>
                     {data && data.map(item => {
                         const imagePath = item.images[0]
                         return (

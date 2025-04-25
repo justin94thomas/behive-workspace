@@ -14,8 +14,13 @@ const Header = () => {
             sx={{
                 py: theme.spacing(3), // equivalent to "lg"
                 px: isMobile ? theme.spacing(4) : '120px',
-                backgroundColor: '#fff',
+                backgroundColor: '#fff !important',
+                opacity: 1,
+                zIndex: 2222,
                 borderBottom: '1px solid #E0E0E0',
+                position: 'sticky',
+                top: 0,
+
             }}
         >
             <Box
@@ -29,7 +34,7 @@ const Header = () => {
                     sx={{
                         border: '1px solid',
                         borderColor: 'primary.main',
-                        borderRadius: '50%',
+                        borderRadius: '4px',
                     }}
                 >
                     <IconPhoneCall size={18} />

@@ -36,7 +36,7 @@ const ChooseUs = () => {
                     fontSize: theme.typography.h2.fontSize,
                     width: '100%'
                 })}>Why Choose us?</Typography>
-                <Grid container size={6}>
+                <Grid container size={6} mt={6}>
                     {features && features.map((item, idx) => {
                         return <Grid size={3} key={idx} className="choose-us-grid">
                             <Box className="choose-us-content">

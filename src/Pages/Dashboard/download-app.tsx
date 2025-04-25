@@ -17,36 +17,38 @@ const DownloadApp = () => {
                 })}>
                     Download our app now
                 </Typography>
-                <img src={BehiveMobApp} alt='behive-mobile' />
-                <Grid container size={12} justifyContent="flex-end" className='download-box'>
-                    <Grid size={6}>
-                        <Typography
-                            sx={{
-                                color: theme.palette.text.secondary,
-                                fontSize: '1.1rem',
-                                mb: 3,
-                            }}
-                        >
-                            Boost your productivity with the BHIVE Workspace app. Elevate your workspace, collaborate efficiently, and unlock exclusive perks.
-                        </Typography>
-                        <Box display="flex" gap={2}>
-                            <Button
-                                component="a"
-                                href="#"
-                                sx={{ p: 0, minWidth: 'unset' }}
+                <div className='download-content'>
+                    <img src={BehiveMobApp} alt='behive-mobile' className='behive-mobile' />
+                    <Grid container size={12} justifyContent="flex-end" className='download-box'>
+                        <Grid size={5}>
+                            <Typography
+                                sx={{
+                                    color: theme.palette.text.secondary,
+                                    fontSize: '1.1rem',
+                                    mb: 3,
+                                }}
                             >
-                                <img src={PlayStoreIcon} alt="Get it on Google Play" style={{ height: 50 }} />
-                            </Button>
-                            <Button
-                                component="a"
-                                href="#"
-                                sx={{ p: 0, minWidth: 'unset' }}
-                            >
-                                <img src={AppStoreIcon} alt="Download on the App Store" style={{ height: 50 }} />
-                            </Button>
-                        </Box>
+                                Boost your productivity with the BHIVE Workspace app. Elevate your workspace, collaborate efficiently, and unlock exclusive perks.
+                            </Typography>
+                            <Box display="flex" gap={2}>
+                                <Button
+                                    component="a"
+                                    href="#"
+                                    sx={{ p: 0, minWidth: 'unset' }}
+                                >
+                                    <img src={PlayStoreIcon} alt="Get it on Google Play" style={{ height: 50 }} />
+                                </Button>
+                                <Button
+                                    component="a"
+                                    href="#"
+                                    sx={{ p: 0, minWidth: 'unset' }}
+                                >
+                                    <img src={AppStoreIcon} alt="Download on the App Store" style={{ height: 50 }} />
+                                </Button>
+                            </Box>
+                        </Grid>
                     </Grid>
-                </Grid>
+                </div>
             </Grid>
         </Box>
     );
