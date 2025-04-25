@@ -4,7 +4,7 @@ import TextBG from '../assets/images/text-background.png';
 const images = {
     Logo: Logo,
     Brand: Brand,
-    TextBG: TextBG
+    TextBG: TextBG,
 }
 
 
