@@ -1,14 +1,13 @@
 import { Box, Card, Grid, useTheme, useMediaQuery } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import './styles.css';
-import JSONData from './data.json';
-import { useState } from 'react';
 import { IconDirectionSign } from '@tabler/icons-react';
 import PayButton from '../../Component/PayButton';
+import { useBeehiveStore } from '../../store/behiveStore';
 
 const OurSpace = () => {
     const theme = useTheme();
-    const [data] = useState(JSONData); //setData
+    const data = useBeehiveStore((state) => state.data);
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     return (
         <Box mt={10}>

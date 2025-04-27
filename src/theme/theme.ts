@@ -1,4 +1,3 @@
-// src/theme.ts
 import { createTheme } from '@mui/material/styles';
 
 export const theme = createTheme({
@@ -22,7 +21,7 @@ export const theme = createTheme({
             600: '#4A4A45',
         },
     },
-    spacing: 4, // base spacing unit (used with theme.spacing(n))
+    spacing: 4,
     typography: {
         fontFamily: 'Inter, sans-serif',
         fontSize: 16, // base font size (1rem)

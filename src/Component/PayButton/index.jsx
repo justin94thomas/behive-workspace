@@ -1,4 +1,3 @@
-import React from 'react';
 import { Grid, Typography, useTheme, useMediaQuery } from '@mui/material';
 import './styles.css';
 const PayButton = ({ classVal, price, discount }) => {

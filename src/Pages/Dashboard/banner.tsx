@@ -61,7 +61,7 @@ const Banner = () => {
                     </Box>
                 </Grid>
                 {!isMobile && <Grid size={4} style={{ textAlign: 'center' }}>
-                    <img src={Brand} width='338px' alt="Meeting illustration" />
+                    <img src={Brand} width='100%' alt="Meeting illustration" />
                 </Grid>}
 
             </Grid>
