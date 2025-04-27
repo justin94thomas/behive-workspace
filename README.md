@@ -8,9 +8,9 @@ Live Demo: https://master--behive-workspace.netlify.app/
 ## Available Scripts
 In the project directory, you can run:
 
-### `npm run dev
+### `npm run dev`
 Runs the app in development mode.
-Open http://localhost:3000 to view it in the browser.`
+Open http://localhost:3000 to view it in the browser.
 
 The page will reload if you make edits.
 You will also see any lint errors in the console.
@@ -21,8 +21,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
-
-See the section about Vite Deployment for more information.
 
 ## Libraries and Frameworks Used
 React – Frontend library
@@ -52,5 +50,6 @@ Application deployed using Netlify.
 
 Author
 Justin Thomas
+
 📧 Email: justin19.94thomas@gmail.com
 
