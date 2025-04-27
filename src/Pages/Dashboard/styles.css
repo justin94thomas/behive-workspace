@@ -129,6 +129,7 @@
 
 .download-content {
     position: relative;
+    top: -160px;
 }
 
 .sub-text {
