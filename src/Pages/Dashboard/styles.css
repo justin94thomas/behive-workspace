@@ -101,3 +101,9 @@
     position: relative;
     top: -120px;
 }
+
+.sub-text {
+    font-size: 12px !important;
+    font-weight: 400;
+    color: #263238;
+}

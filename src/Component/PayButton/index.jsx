@@ -1,8 +1,7 @@
 import React from 'react';
-import { Grid, Typography, useTheme } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import './styles.css';
 const PayButton = ({ classVal, price, discount }) => {
-    const theme = useTheme();
 
     return (<>
         <Grid container className="paybtn-main" style={classVal === 'grey' ? { backgroundColor: '#F9F9F9' } : { backgroundColor: '#FFCF4B' }}>
