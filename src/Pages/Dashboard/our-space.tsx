@@ -1,4 +1,4 @@
-import { Box, Card, Grid } from '@mui/material';
+import { Box, Card, Grid, useTheme, useMediaQuery } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import './styles.css';
 import JSONData from './data.json';
@@ -7,19 +7,20 @@ import { IconDirectionSign } from '@tabler/icons-react';
 import PayButton from '../../Component/PayButton';
 
 const OurSpace = () => {
+    const theme = useTheme();
     const [data] = useState(JSONData); //setData
-
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     return (
         <Box mt={10}>
-            <Grid className="behive-our-space">
+            <Grid className={isMobile ? "behive-our-space-mob" : "behive-our-space"}>
                 <Typography sx={(theme) => ({
                     fontWeight: theme.typography.h2.fontWeight,
-                    fontSize: theme.typography.h2.fontSize,
+                    fontSize: isMobile ? theme.typography.h3.fontSize : theme.typography.h2.fontSize,
                     width: '100%',
                 })}>
                     Our Space Overview
                 </Typography>
-                <Grid container spacing={8} mt={6}>
+                <Grid container spacing={isMobile ? 12 : 8} mt={6}>
                     {data && data.map(item => {
                         const imagePath = item.images[0]
                         return (
@@ -27,7 +28,7 @@ const OurSpace = () => {
                                 <Card className="our-space-card">
                                     <>
                                         <Grid container className="space-box-head">
-                                            <Typography variant="h4" className='location-name'>{item.name}</Typography>
+                                            <Typography variant={isMobile ? "h5" : "h4"} className='location-name'>{item.name}</Typography>
                                             <div className="distance-box">
                                                 <IconDirectionSign size={20} />
                                                 <Typography fontSize="8px" color="#26323880">{'6 Kms'}</Typography>

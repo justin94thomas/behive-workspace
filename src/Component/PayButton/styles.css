@@ -34,9 +34,22 @@
     font-weight: 500 !important;
 }
 
+.grey-button-mob {
+    color: #65624C;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+}
+
+
 .yellow-button {
     color: #514D2D;
     font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+.yellow-button-mob {
+    color: #514D2D;
+    font-size: 12px !important;
     font-weight: 500 !important;
 }
 
@@ -46,8 +59,20 @@
     font-weight: 600 !important;
 }
 
+.pay-amt-mob {
+    font-size: 18px !important;
+    color: #263238;
+    font-weight: 600 !important;
+}
+
 .pay-sub {
     font-size: 16px;
+    font-weight: 400;
+    color: #263238;
+}
+
+.pay-sub-mob {
+    font-size: 11px !important;
     font-weight: 400;
     color: #263238;
 }

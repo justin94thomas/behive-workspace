@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Grid, useTheme } from '@mui/material';
+import { Box, Grid, Card, useTheme, useMediaQuery } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import {
     IconWifi,
@@ -23,6 +23,8 @@ interface Feature {
 
 const ChooseUs = () => {
     const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
     const [features, setFeature] = useState<Feature[]>([
         { id: 1, icon: IconUsersGroup, label: 'Community Events', show: false, desc: 'One liner detail about the feature' },
         { id: 2, icon: IconBarbell, label: 'Gym Facilities', show: false, desc: 'One liner detail about the feature' },
@@ -56,38 +58,46 @@ const ChooseUs = () => {
 
     return (
         <Box mt={10}>
-            <Grid justifySelf={'center'} className="behive-choose-us">
+            <Grid justifySelf={'center'} className={isMobile ? "behive-choose-us-mob" : "behive-choose-us"}>
                 <Typography sx={(theme) => ({
                     fontWeight: theme.typography.h2.fontWeight,
-                    fontSize: theme.typography.h2.fontSize,
+                    fontSize: isMobile ? theme.typography.h3.fontSize : theme.typography.h2.fontSize,
                     width: '100%'
                 })}>Why Choose us?</Typography>
                 <Grid container size={6} mt={6}>
                     {features && features.map((item, idx) => {
                         return <Grid sx={{
-                            borderTop: idx !== 0 && idx !== 1 && idx !== 2 && idx !== 3 ? '1px solid #e5e5e7' : 'none',
-                            borderLeft: idx !== 0 && idx !== 4 ? '1px solid #e5e5e7' : 'none',
-                            borderRight: idx !== 3 && idx !== 7 ? '1px solid #e5e5e7' : 'none',
-                            borderBottom: idx !== 4 && idx !== 5 && idx !== 6 && idx !== 7 ? '1px solid #e5e5e7' : 'none',
+                            borderTop: !isMobile && idx !== 0 && idx !== 1 && idx !== 2 && idx !== 3 ? '1px solid #e5e5e7' : 'none',
+                            borderLeft: !isMobile && idx !== 0 && idx !== 4 ? '1px solid #e5e5e7' : 'none',
+                            borderRight: !isMobile && idx !== 3 && idx !== 7 ? '1px solid #e5e5e7' : 'none',
+                            borderBottom: !isMobile && idx !== 4 && idx !== 5 && idx !== 6 && idx !== 7 ? '1px solid #e5e5e7' : 'none',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
                             flexDirection: 'column',
-                            p: 4,
+                            p: isMobile ? 2 : 4,
                         }}
-                            size={3}
+                            size={isMobile ? 6 : 3}
                             key={idx}
                             className="choose-us-grid"
                             onMouseOver={() => handleShowTile(item)}
                             onMouseOut={() => handleHideTile()}
                         >
-                            <Box className="choose-us-content">
+                            {isMobile ? <Card className="our-space-card-mob">
+                                <Box className="choose-us-content-mob">
+                                    <item.icon size={40} color={theme.palette.primary.main} />
+                                    <div>
+                                        <Typography style={{ fontSize: "14px" }} >{item.label}</Typography>
+                                    </div>
+                                </Box>
+                            </Card> : <Box className="choose-us-content">
                                 <item.icon size={40} color={theme.palette.primary.main} />
                                 <div>
-                                    <Typography>{item.label}</Typography>
+                                    <Typography style={{ fontSize: theme.typography.h5.fontSize }} >{item.label}</Typography>
                                     {item.show && <Typography className='sub-text'>{item.desc}</Typography>}
                                 </div>
-                            </Box>
+                            </Box>}
+
                         </Grid>
                     })}
                 </Grid>

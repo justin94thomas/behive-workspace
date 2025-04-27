@@ -9,9 +9,23 @@
     height: 80px;
 }
 
+.choose-us-content-mob {
+    align-items: anchor-center;
+    height: 80px;
+    text-align: center;
+}
+
 .our-space-card {
-    height: 384px;
+    height: auto;
     width: 370px;
+    border-radius: 8px;
+    padding: 8px;
+    border: 1.08px solid #EEE7E7CC;
+}
+
+.our-space-card-mob {
+    height: 100%;
+    width: 100%;
     border-radius: 8px;
     padding: 8px;
     border: 1.08px solid #EEE7E7CC;
@@ -60,6 +74,13 @@
     justify-self: center
 }
 
+.behive-our-space-mob,
+.behive-choose-us-mob {
+    width: 95%;
+    box-sizing: border-box;
+    justify-self: center
+}
+
 .download-card {
     background-color: #fff;
     border-radius: 8px;
@@ -80,7 +101,7 @@
 }
 
 .behive-footer {
-    background-color: #222E34;
+    background-color: #222E34 !important;
     padding: 8px;
     place-content: center;
 }
@@ -90,6 +111,11 @@
     font-size: 14px;
 }
 
+.behive-text-mob {
+    color: #DDDDDD;
+    font-size: 12px !important;
+}
+
 .behive-mobile {
     width: 600px;
     left: 30px;
@@ -97,13 +123,25 @@
     bottom: -183px;
 }
 
+.behive-mobile-view {
+    width: 100%;
+}
+
 .download-content {
     position: relative;
-    top: -120px;
 }
 
 .sub-text {
     font-size: 12px !important;
     font-weight: 400;
     color: #263238;
+}
+
+.download-app-card {
+    width: 95%;
+    justify-self: center;
+    border-radius: 8px;
+    padding: 8px;
+    border: 1.08px solid #EEE7E7CC;
+    margin-bottom: 10px;
 }
